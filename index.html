@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reviewer: Aralin 14–16</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f5fb;--card:#fff;--ink:#16223a;--mute:#5d6b85;--acc:#0e9f8e;--acc2:#ffd84d;--bad:#d64545;--line:#d5deec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1729;--card:#18233b;--ink:#eaf0fb;--mute:#9aa8c4;--acc:#3ecfbd;--acc2:#e8c53a;--bad:#ff7a7a;--line:#2b3a5a}}
+:root[data-theme="dark"]{--bg:#0f1729;--card:#18233b;--ink:#eaf0fb;--mute:#9aa8c4;--acc:#3ecfbd;--acc2:#e8c53a;--bad:#ff7a7a;--line:#2b3a5a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lexend,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+main{max-width:560px;margin:0 auto;padding:16px}
+h1{font-size:1.35rem;font-weight:800;margin:4px 0 2px}
+.sub{color:var(--mute);font-size:.85rem;margin:0 0 14px}
+nav{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto}
+nav button,.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:.85rem;cursor:pointer;white-space:nowrap}
+nav button.on,.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:20px;min-height:190px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;text-align:center}
+.card .tag{font-size:.75rem;color:var(--mute);margin-bottom:8px}
+.card .q{font-size:1.15rem;font-weight:600}
+.card .a{font-size:1rem}
+.card.flip{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 10%,var(--card))}
+.row{display:flex;gap:8px;margin-top:12px}
+.btn{flex:1;border:0;border-radius:12px;padding:12px;font:inherit;font-weight:600;cursor:pointer;color:#fff;background:var(--acc)}
+.btn.alt{background:var(--card);color:var(--ink);border:1.5px solid var(--line)}
+.bar{height:6px;background:var(--line);border-radius:9px;margin:10px 0;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .25s}
+.meta{font-size:.8rem;color:var(--mute);display:flex;justify-content:space-between}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
+.opt.ok{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 18%,var(--card))}
+.opt.no{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 15%,var(--card))}
+.why{font-size:.88rem;color:var(--mute);margin:8px 0}
+.big{font-size:2.4rem;font-weight:800;text-align:center;margin:8px 0}
+.spk{display:grid;gap:8px}
+.let{display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;text-align:left;font:inherit;color:var(--ink);width:100%}
+.let b{font-size:1.6rem;width:36px;height:36px;line-height:36px;text-align:center;background:var(--acc2);color:#16223a;border-radius:8px;flex:none}
+.let span{font-size:.92rem}.let small{display:block;color:var(--mute)}
+.note{background:color-mix(in srgb,var(--acc2) 25%,var(--card));border-radius:12px;padding:12px;font-size:.9rem;margin:12px 0}
+h2{font-size:1rem;margin:18px 0 8px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+</style></head><body><main>
+<h1>Reviewer: Aralin 14–16</h1>
+<p class="sub">Lokal at Nasyunal Isyu · Sitwasyong Pangkomunikasyon · Sosyal Midya</p>
+<nav id="tabs"></nav>
+<section id="view"></section>
+</main>
+<script>
+const CARDS=[
+[14,"Lokal na isyu","Problema sa isang tiyak na komunidad (barangay, bayan, lungsod, lalawigan). Limitado ang saklaw pero ramdam ng residente."],
+[14,"Nasyunal na isyu","Sakop ang buong bansa; kailangan ng solusyon mula sa pambansang pamahalaan at mamamayan."],
+[14,"Bakit lumalala ang kahirapan sa komunidad?","Kulang ang hanapbuhay at kabuhayan, kaya nauuwi sa pangungutang at pag-asa sa ayuda."],
+[14,"Pinagmulan ng krisis pangkalikasan sa Pilipinas","Walang habas na pagputol ng puno, hindi maayos na pamamahala sa basura, at polusyon mula sa industriya."],
+[14,"Ano ang epekto ng krisis pangkalikasan?","Apektado ang mangingisda at magsasaka; tumataas ang panganib ng baha at landslide."],
+[14,"Datos tungkol sa kahirapan (2015)","Ayon sa Philippine Statistics Authority: milyon-milyong Pilipino ang nabubuhay pa rin sa ilalim ng poverty line."],
+[14,"Indonesia: pangunahing isyu","Illegal logging at haze pollution na umaabot sa Malaysia at Singapore."],
+[14,"Vietnam: pangunahing isyu","Mabilis na urbanisasyon: trapiko, kakulangan sa pabahay, polusyon sa hangin at tubig."],
+[14,"Myanmar: pangunahing isyu","Political conflict at paglabag sa karapatang pantao matapos ang military coup noong 2021; maraming refugees."],
+[14,"Aral ng Aralin 14","Magkakaugnay ang isyu sa Timog-Silangang Asya. Mahalaga ang rehiyonal na kooperasyon (ASEAN) at ang pagkilos ng bawat mamamayan."],
+[15,"Forum","Palitan ng pananaw sa isang paksa. Bukas sa interaksyon; madalas may open forum sa dulo."],
+[15,"Lektyur","Layuning magturo o magpaliwanag. Karaniwan sa silid-aralan o akademikong pagtitipon."],
+[15,"Seminar","May mas tiyak na tema; layuning palawakin ang kaalaman. May tagapagsalita, visual aids, at diskusyon."],
+[15,"Worksyap","Interaktibong aktibidad para sanayin ang kasanayan. Aktibo ang kalahok (hal. pagsulat ng sanaysay, public speaking)."],
+[15,"Symposium","Serye ng maiikling presentasyon ng iba't ibang eksperto sa isang paksa, sinusundan ng open forum."],
+[15,"Kumperensya","Malaking pagtitipon, may parallel sessions, mas detalyadong talakayan. Lokal, rehiyonal, o internasyonal."],
+[15,"Roundtable discussion","Pantay-pantay ang lahat ng kalahok. Walang pangunahing tagapagsalita."],
+[15,"Small group discussion","Maaaring may facilitator. Layuning makabuo ng ideya, solusyon, o rekomendasyon."],
+[15,"Pulong vs. Miting vs. Asembliya","Pulong: pinakamaliit, konkretong usapin. Miting: karaniwan sa trabaho/opisina. Asembliya: malaki (paaralan/pamayanan), para sa impormasyon o pagboto."],
+[15,"Pasalitang pag-uulat: maliit vs. malaking pangkat","Maliit: impormal, may interaksyon, personal. Malaki: pormal, may visual aid, organisadong presentasyon."],
+[15,"Dell Hymes: ano ang ibinibigay ng SPEAKING model?","Balangkas o kalikasan ng sitwasyon: sino ang kalahok, ano ang layunin, at paano isinasagawa."],
+[15,"M.A.K. Halliday: ano ang binibigyang-diin?","Ang gamit o layunin ng wika (mga tungkuling pangwika) sa bawat interaksyon."],
+[16,"Sosyal midya (Kaplan & Haenlein, 2010)","Mga aplikasyon at platapormang nakabatay sa internet na nagpapahintulot sa user na lumikha, magbahagi, at magpalitan ng nilalaman."],
+[16,"Castells (2010)","Network society: ang ugnayan, ekonomiya, at kultura ay halos nakabatay na sa teknolohiya at internet."],
+[16,"Kemp (2022)","Kinikilala ang Pilipinas bilang \"Social Media Capital of the World\" dahil sa dami ng oras online."],
+[16,"4 na positibong epekto ng sosyal midya","1) Mas mabilis na komunikasyon 2) Pagpapalaganap ng impormasyon at edukasyon 3) Pagsulong ng negosyo (marketing) 4) Adbokasiyang panlipunan."],
+[16,"Allcott & Gentzkow (2017)","Malaki ang papel ng social media sa pagkalat ng maling balita, lalo na sa eleksyon."],
+[16,"Patchin & Hinduja (2010)","Cyberbullying at online harassment: nakaaapekto sa emosyonal at mental na kalusugan."],
+[16,"Andreassen et al. (2016)","Labis na paggamit ay maaaring mauwi sa \"Facebook addiction\"; may epekto sa pag-aaral, trabaho, at pamilya."],
+[16,"Boyd & Ellison (2007)","Ang social media ay hindi lang teknolohiya kundi espasyong panlipunan na dapat gamitin nang responsable."],
+[16,"Ellison, Steinfield & Lampe (2007)","Ang social networking sites ay nakatutulong magpatatag ng ugnayan (personal man o propesyonal)."],
+[16,"Manca & Ranieri (2016)","Nagagamit ang social media bilang makabagong kasangkapan sa pagtuturo at pagkatuto."]
+];
+const QS=[
+["Ang problemang direktang nakaaapekto sa isang partikular na barangay o bayan ay tinatawag na…",["Nasyunal na isyu","Lokal na isyu","Pandaigdigang isyu"],1,"Limitado ang saklaw ng lokal na isyu pero ramdam ng mga residente."],
+["Sa anong bansa matagal nang problema ang illegal logging at haze pollution?",["Vietnam","Myanmar","Indonesia"],2,"Ang haze ng Indonesia ay umaabot pa sa Malaysia at Singapore."],
+["Military coup noong 2021 ang nagpalala ng krisis sa…",["Myanmar","Thailand","Vietnam"],0,"Political conflict at paglabag sa karapatang pantao ang sanhi ng refugees."],
+["Anong organisasyon ang binanggit para sa rehiyonal na kooperasyon?",["UN","ASEAN","WHO"],1,"ASEAN ang tumutugon sa mga isyu ng Timog-Silangang Asya."],
+["Serye ng presentasyon ng mga eksperto na sinusundan ng open forum:",["Symposium","Roundtable","Lektyur"],0,"Symposium = maraming eksperto + open forum."],
+["Walang pangunahing tagapagsalita; pantay-pantay ang lahat:",["Seminar","Kumperensya","Roundtable"],2,"Round table = walang \"ulo\" ng mesa."],
+["Malaking pagtitipon na may parallel sessions:",["Kumperensya","Pulong","Worksyap"],0,"Parallel sessions ang tatak ng kumperensya."],
+["Interaktibong aktibidad para sanayin ang kasanayan ng kalahok:",["Lektyur","Worksyap","Forum"],1,"Worksyap = \"work\": gumagawa ang kalahok."],
+["Sa SPEAKING model, ang \"E\" ay…",["Ends (layunin)","Environment","Expression"],0,"E-nds: layunin o resulta ng usapan."],
+["Sa SPEAKING model, ang \"K\" (Keys) ay tumutukoy sa…",["Kagamitan","Tono/paraan ng usapan","Kalahok"],1,"Keys: pormal/di-pormal, masaya o seryoso."],
+["Ang I-nstrumentalities ay…",["Palita/pasulat","Batas","Genre"],0,"Daluyan ng wika: pasalita o pasulat (hal. PowerPoint, online meeting)."],
+["Paghingi ng permiso sa miting ay tungkuling…",["Regulatori","Instrumental","Personal"],1,"Ginagamit ang wika upang makamit ang pangangailangan."],
+["Pagbibigay ng panuto sa worksyap ay tungkuling…",["Regulatori","Heuristik","Imahinatibo"],0,"Regulatori = kontrolin ang kilos ng iba."],
+["Pagbati at pakikipagbiruan ay tungkuling…",["Personal","Interaksyunal","Informativ"],1,"Interaksyunal = pagpapanatili ng ugnayan."],
+["Pagtatanong sa open forum ay tungkuling…",["Heuristik","Regulatori","Imahinatibo"],0,"Heuristik = pagtuklas o pagtatanong."],
+["Presentasyon o ice breaker na may kuwento o tula ay…",["Personal","Imahinatibo","Instrumental"],1,"Imahinatibo = malikhaing gamit ng wika."],
+["Alin ang nagsabing ang Pilipinas ang \"Social Media Capital of the World\"?",["Kemp (2022)","Castells (2010)","Boyd & Ellison"],0,"Kemp, 2022."],
+["Sino ang may kaugnayan sa pag-aaral ng cyberbullying?",["Andreassen","Patchin & Hinduja","Allcott & Gentzkow"],1,"Patchin & Hinduja, 2010."],
+["Alin ang may kinalaman sa fake news at eleksyon?",["Allcott & Gentzkow","Manca & Ranieri","Ellison et al."],0,"Allcott & Gentzkow, 2017."]
+];
+const SPK=[["S","Setting","Lugar at panahon ng usapan","Pulong sa opisina, seminar sa conference hall"],
+["P","Participants","Mga kalahok","Guro, mag-aaral, awdyens"],
+["E","Ends","Layunin o resulta","Lektyur, roundtable"],
+["A","Act sequence","Daloy ng komunikasyon","Pagbati, pagpapakilala"],
+["K","Keys","Tono: pormal/di-pormal","Masaya ba o seryoso"],
+["I","Instrumentalities","Daluyan: palita/pasulat","PowerPoint, online meeting"],
+["N","Norms","Kilos o asal","Respeto sa nagsasalita"],
+["G","Genre","Anyo ng diskurso","Talumpati, talakayan, ulat"]];
+const HAL=[["Instrumental","makamit ang pangangailangan","Paghingi ng permiso"],["Regulatori","kontrolin ang kilos ng iba","Pagbibigay ng panuto"],["Interaksyunal","panatilihin ang ugnayan","Pagbati, pakikipagbiruan"],["Personal","ipahayag ang damdamin/opinyon","Pakikiramay, pagsasabi ng pananaw"],["Heuristik","magtanong, mag-usisa","Pagtatanong sa open forum"],["Imahinatibo","malikhaing gamit","Kuwento, tula, ice breaker"]];
+const $=s=>document.querySelector(s),V=$('#view');
+const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const TABS=[["fc","Flashcards"],["qz","Pagsusulit"],["sp","SPEAKING"],["hl","Halliday"]];
+let tab="fc";
+function tabs(){$('#tabs').innerHTML=TABS.map(t=>`<button class="${t[0]==tab?'on':''}" data-t="${t[0]}">${t[1]}</button>`).join('');
+$('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;go()})}
+function go(){tabs();({fc:fc,qz:qz,sp:sp,hl:hl})[tab]()}
+/* flashcards */
+let F={ar:0,deck:[],i:0,flip:false,known:0,total:0};
+function fcStart(ar){F.ar=ar;F.deck=shuf(CARDS.filter(c=>!ar||c[0]==ar));F.total=F.deck.length;F.i=0;F.flip=false;F.known=0}
+function fc(){if(!F.deck.length&&!F.total)fcStart(0);
+let chips=[[0,"Lahat"],[14,"Aralin 14"],[15,"Aralin 15"],[16,"Aralin 16"]].map(c=>`<button class="chip ${F.ar==c[0]?'on':''}" data-a="${c[0]}">${c[1]}</button>`).join('');
+let h=`<div class="chips">${chips}</div>`;
+if(!F.deck.length){h+=`<div class="card" style="cursor:default"><div class="big">🎉</div><div class="q">Tapos na! Alam mo na lahat ng ${F.total} card.</div></div><div class="row"><button class="btn" id="again">Ulitin</button></div>`}
+else{const c=F.deck[F.i%F.deck.length];
+h+=`<div class="meta"><span>Alam na: ${F.known}/${F.total}</span><span>Natitira: ${F.deck.length}</span></div><div class="bar"><i style="width:${F.known/F.total*100}%"></i></div>
+<div class="card ${F.flip?'flip':''}" id="cd" tabindex="0" role="button"><div class="tag">Aralin ${c[0]} · ${F.flip?'Sagot':'I-tap para makita ang sagot'}</div>${F.flip?`<div class="a">${c[2]}</div>`:`<div class="q">${c[1]}</div>`}</div>`;
+if(F.flip)h+=`<div class="row"><button class="btn alt" id="no">Balikan</button><button class="btn" id="yes">Alam ko na</button></div>`}
+V.innerHTML=h;
+V.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{fcStart(+b.dataset.a);fc()});
+const cd=$('#cd');if(cd){cd.onclick=()=>{F.flip=!F.flip;fc()};cd.onkeydown=e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();cd.click()}}}
+if($('#yes'))$('#yes').onclick=()=>{F.deck.splice(F.i%F.deck.length,1);F.known++;F.flip=false;fc()};
+if($('#no'))$('#no').onclick=()=>{F.i++;F.flip=false;fc()};
+if($('#again'))$('#again').onclick=()=>{fcStart(F.ar);fc()}}
+/* quiz */
+let Q={list:[],i:0,score:0,done:false,pick:null};
+function qzStart(){Q={list:shuf(QS),i:0,score:0,done:false,pick:null}}
+function qz(){if(!Q.list.length)qzStart();
+if(Q.i>=Q.list.length){const p=Math.round(Q.score/Q.list.length*100);
+V.innerHTML=`<div class="card" style="cursor:default"><div class="big">${Q.score}/${Q.list.length}</div><div class="q">${p>=80?'Ang galing! Handa ka na. 🔥':p>=50?'Malapit na! Balikan ang flashcards.':'Okay lang, ulitin natin.'}</div></div><div class="row"><button class="btn" id="re">Ulitin</button></div>`;
+$('#re').onclick=()=>{qzStart();qz()};return}
+const q=Q.list[Q.i];
+let h=`<div class="meta"><span>Tanong ${Q.i+1}/${Q.list.length}</span><span>Puntos: ${Q.score}</span></div><div class="bar"><i style="width:${Q.i/Q.list.length*100}%"></i></div><h2 style="margin-top:6px">${q[0]}</h2>`;
+q[1].forEach((o,k)=>{let c='';if(Q.pick!==null){if(k==q[2])c='ok';else if(k==Q.pick)c='no'}
+h+=`<button class="opt ${c}" data-k="${k}" ${Q.pick!==null?'disabled':''}>${o}</button>`});
+if(Q.pick!==null)h+=`<p class="why">${Q.pick==q[2]?'✅ Tama! ':'❌ Mali. '}${q[3]}</p><div class="row"><button class="btn" id="nx">Susunod</button></div>`;
+V.innerHTML=h;
+V.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{Q.pick=+b.dataset.k;if(Q.pick==q[2])Q.score++;qz()});
+if($('#nx'))$('#nx').onclick=()=>{Q.i++;Q.pick=null;qz()}}
+/* SPEAKING */
+let S=new Set();
+function sp(){V.innerHTML=`<div class="note">Mnemonic: <b>S-P-E-A-K-I-N-G</b>. I-tap ang bawat letra, subukang hulaan muna bago buksan.</div><div class="spk">${SPK.map((r,i)=>`<button class="let" data-i="${i}"><b>${r[0]}</b><span>${S.has(i)?`<b style="all:unset;font-weight:600">${r[1]}</b> · ${r[2]}<small>Halimbawa: ${r[3]}</small>`:'I-tap para buksan'}</span></button>`).join('')}</div>
+<h2>Tandaan</h2><p class="why">Hymes = <b>konteksto</b> (sino, saan, bakit). Ginagamit ito sa pagsusuri ng buong sitwasyon ng komunikasyon.</p>`;
+V.querySelectorAll('.let').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;S.has(i)?S.delete(i):S.add(i);sp()})}
+/* Halliday */
+let H={i:0,score:0,list:[],pick:null};
+function hlStart(){H={i:0,score:0,list:shuf(HAL),pick:null}}
+function hl(){if(!H.list.length)hlStart();
+if(H.i>=H.list.length){V.innerHTML=`<div class="card" style="cursor:default"><div class="big">${H.score}/${H.list.length}</div><div class="q">Tungkuling pangwika ni Halliday</div></div><div class="row"><button class="btn" id="re">Ulitin</button></div><h2>Buod</h2>${HAL.map(r=>`<p class="why"><b>${r[0]}</b>: ${r[1]} (${r[2]})</p>`).join('')}`;$('#re').onclick=()=>{hlStart();hl()};return}
+const r=H.list[H.i];
+let h=`<div class="note">Halliday: Ano ang <b>tungkulin</b> ng wika sa sitwasyong ito?</div><div class="meta"><span>${H.i+1}/${H.list.length}</span><span>Puntos: ${H.score}</span></div><h2 style="margin-top:6px">“${r[2]}”</h2>`;
+HAL.forEach((o,k)=>{let c='';if(H.pick!==null){if(o[0]==r[0])c='ok';else if(k==H.pick)c='no'}
+h+=`<button class="opt ${c}" data-k="${k}" ${H.pick!==null?'disabled':''}>${o[0]}</button>`});
+if(H.pick!==null)h+=`<p class="why">${HAL[H.pick][0]==r[0]?'✅ ':'❌ '}${r[0]} = ${r[1]}.</p><div class="row"><button class="btn" id="nx">Susunod</button></div>`;
+V.innerHTML=h;
+V.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{H.pick=+b.dataset.k;if(HAL[H.pick][0]==r[0])H.score++;hl()});
+if($('#nx'))$('#nx').onclick=()=>{H.i++;H.pick=null;hl()}}
+go();
+</script></body></html>
